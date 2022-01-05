@@ -2,8 +2,6 @@
 
 The idea behind this project is to provide the Risk Team with a tool to run tests over the functionality of Sift on Subscriptions and the use of the tokenCharge request.
 
-This is a WIP.
-
 ### Developed by
 
  - Deisy Leal
@@ -12,7 +10,7 @@ This is a WIP.
 
 *Sales Engineering Team*
 
-## Notes
+### Notes
 
 ***This is a WIP***
 
