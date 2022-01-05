@@ -1,0 +1,39 @@
+mat-toolbar {
+  background: linear-gradient(135deg, #023365 0%, #1e65ae 100%);
+  color: white;
+  padding: 40px 20px 40px 20px;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 270px;
+  border-right: none;
+  background: linear-gradient(180deg, #00e6b2 0%, #023365 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+
+.content {
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media only screen and (max-device-width: 800px) {
+  .content {
+    margin-left: 16px;
+  }
+}

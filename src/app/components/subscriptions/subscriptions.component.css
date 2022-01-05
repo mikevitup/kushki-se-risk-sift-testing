@@ -1,0 +1,14 @@
+input[type=submit] {
+  background-color: #023365;
+  border: 1px solid #023365;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  line-height: 170%;
+  text-align: center;
+  height: 36px;
+  width: 140px;
+}
