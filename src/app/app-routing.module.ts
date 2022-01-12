@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'tokenCharge', component: TokenChargeComponent },
   { path: 'subscriptions', component: SubscriptionsComponent },
   { path: 'onDemand', component: OnDemandComponent },
-
 ];
 
 @NgModule({

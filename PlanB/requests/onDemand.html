@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kushki - Riesgos - Sift en Suscripciones</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://cdn.kushkipagos.com/kushki.min.js"></script>
+    <!--<script data-main="../assets/js/onDemand.js" src="../assets/js/require.js"></script>-->
+</head>
+<body>   
+  <div class="wrapper">
+    <div class="section">
+      <div class="top_navbar">
+        <div class="hamburger">
+          <!--<a href="#">
+            <i class="fas fa-bars"></i>
+          </a>-->
+          <a href="#" class="fas fa-bars"><img src="../assets/img/Light.png" width="90px"></a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div align="center"><img src="../assets/img/Light_1.png"><br>
+      <a class="aHome" href="">Inicio</a></div><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="../requests/subscriptions.html">Suscripciones</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="../requests/onDemand.html">Pagos Bajo Demanda</a><br>
+    </div>
+  </div>
+  <script>
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+      document.querySelector("body").classList.toggle("active");
+    })
+  </script>
+
+  <!-- Aquí va el código -->
+  <div class="bodyContainer">
+    <h1>Kushki.js</h1>
+    <h2 class="myH2">- Pagos Bajo Demanda -</h2>
+    <form id="user-form" method="post">
+        <label>Nombre y Apellido*: </label>
+        <input placeholder="Nombre y Apellido" type="text" id="name" name="name" required><br><br>
+        <label>E-Mail*: </label>
+        <input placeholder="E-Mail" type="text" id="email" name="email" required><br><br>
+        <label>País*: </label>
+        <select id="currency" name="currency" required>
+            <option selected>Por favor seleccione el País para la prueba</option>
+            <option value="CLP">Chile</option>
+            <option value="COP">Colombia</option>
+            <option value="USD">Ecuador</option>
+            <option value="MXN">México</option>
+            <option value="PEN">Perú - Soles -</option>
+            <option value="USD">Perú - Dólares -</option>
+        </select><br><br>
+        <label>Llave Pública*: </label>
+        <input placeholder="Llave Pública" type="text" id="public" name="public" required><br><br>
+        <label>Llave Privada*: </label>
+        <input placeholder="Llave Privada" type="password" id="private" name="private" required><br><br>
+        <input type="submit" id="register" value="Confirmar">
+    </form>
+    <table class="myTable">
+      <tr>
+        <th>Registro Tarjeta</th>
+        <th>Cobro</th>
+      </tr>
+      <tr>
+        <td>
+            <form id="payment-form" method="post">
+                <label>Número de Tarjeta*: </label>
+                <input placeholder="Número de Tarjeta" type="text" id="number" name="number" required><br><br>
+                <label>Mes de Expiración*: </label>
+                <input placeholder="MM" type="text" id="expirationMonth" name="expirationMonth" required><br><br>
+                <label>Año de Expiración*: </label>
+                <input placeholder="YY" type="text" id="expirationYear" name="expirationYear" required><br><br>
+                <label>Código de Seguridad (cvv)*: </label>
+                <input placeholder="Código de Seguridad (cvv)" type="password" id="cvv" name="cvv" required><br><br>
+                <div align="center"><input type="submit" id="button" value="Registrar Tarjeta"></div>
+            </form>
+        </td>
+        <td>
+            <div>Al presionar el siguiente botón se generaran las peticiones<br>de "requestTokenCharge" y "charge"</div><br>
+            <form id="tokenCharge" method="post">
+                <div align="center"><input type="submit" id="charge" value="Generar Cobro"></div>
+            </form>
+        </td>
+      </tr>
+    </table>
+    <script src="../assets/js/onDemand.js"></script>
+  </div>
+  <!-- Aquí va el código -->
+
+  <footer class="footer">
+    <table>
+      <tr>
+        <td align="center">
+          <span class="foot">Sales Engineering Team |&nbsp;</span><a href="https://www.kushki.com" class="aFooter" target="_blank">Kushki Pagos</a><span class="foot">&nbsp;| &#169; 2021 - 2022</span>
+        </td>
+        <td>
+          <div class="myDiv" align="right"><img src="../assets/img/Horizontal_White.svg" width="150px"></div>
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+</html>

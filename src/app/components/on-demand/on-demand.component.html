@@ -1,15 +1,50 @@
 <h1>Kushki.js</h1>
 <h2 class="myH2">- Pagos Bajo Demanda -</h2>
-<form id="payment-form" method="post">
-    <label>Número de Tarjeta*: </label>
-    <input placeholder="Número de Tarjeta" type="text" id="number" name="number" required><br><br>
+<form id="user-form" method="post">
     <label>Nombre y Apellido*: </label>
     <input placeholder="Nombre y Apellido" type="text" id="name" name="name" required><br><br>
-    <label>Mes de Expiración*: </label>
-    <input placeholder="MM" type="text" id="expirationMonth" name="expirationMonth" required><br><br>
-    <label>Año de Expiración*: </label>
-    <input placeholder="YY" type="text" id="expirationYear" name="expirationYear" required><br><br>
-    <label>Código de Seguridad (cvv)*: </label>
-    <input placeholder="Código de Seguridad (cvv)" type="password" id="cvv" name="cvv" required><br><br>
-    <div align="center"><input type="submit" id="button" value="Registrar Tarjeta"></div>
+    <label>E-Mail*: </label>
+    <input placeholder="E-Mail" type="text" id="email" name="email" required><br><br>
+    <label>País*: </label>
+    <select id="currency" name="currency" required>
+        <option selected>Por favor seleccione el País para la prueba</option>
+        <option value="CLP">Chile</option>
+        <option value="COP">Colombia</option>
+        <option value="USD">Ecuador</option>
+        <option value="MXN">México</option>
+        <option value="PEN">Perú - Soles -</option>
+        <option value="USD">Perú - Dólares -</option>
+    </select><br><br>
+    <label>Llave Pública*: </label>
+    <input placeholder="Llave Pública" type="text" id="public" name="public" required><br><br>
+    <label>Llave Privada*: </label>
+    <input placeholder="Llave Privada" type="password" id="private" name="private" required><br><br>
+    <input type="submit" id="register" value="Confirmar">
 </form>
+<table class="myTable">
+  <tr>
+    <th>Registro Tarjeta</th>
+    <th>Cobro</th>
+  </tr>
+  <tr>
+    <td>
+        <form id="payment-form" method="post">
+            <label>Número de Tarjeta*: </label>
+            <input placeholder="Número de Tarjeta" type="text" id="number" name="number" required><br><br>
+            <label>Mes de Expiración*: </label>
+            <input placeholder="MM" type="text" id="expirationMonth" name="expirationMonth" required><br><br>
+            <label>Año de Expiración*: </label>
+            <input placeholder="YY" type="text" id="expirationYear" name="expirationYear" required><br><br>
+            <label>Código de Seguridad (cvv)*: </label>
+            <input placeholder="Código de Seguridad (cvv)" type="password" id="cvv" name="cvv" required><br><br>
+            <div align="center"><input type="submit" id="button" value="Registrar Tarjeta"></div>
+        </form>
+    </td>
+    <td>
+        <div>Al presionar el siguiente botón se generaran las peticiones<br>de "requestTokenCharge" y "charge"</div><br>
+        <form id="tokenCharge" method="post">
+            <div align="center"><input type="submit" id="charge" value="Generar Cobro"></div>
+        </form>
+    </td>
+  </tr>
+</table>
